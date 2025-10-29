@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Polls App</title>
+</head>
+<body>
+    <h1>Salam, Ədilə!</h1>
+    <p>Bu, Polls tətbiqinin əsas səhifəsidir.</p>
+
+    <ul>
+    {% for question in latest_question_list %}
+        <li>
+            <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
+
